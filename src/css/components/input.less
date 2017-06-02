@@ -1,0 +1,216 @@
+@main-color:#F96854; /*好房经纪主色*/
+@yellow:F3CA4D; /*黄色，高亮显示*/
+@green:#73C48F;/*绿色*/
+@black:#222222;/*黑色*/
+@grey:#555555;/*灰色*/
+@light-grey:#878787;/*灰色高亮*/
+@dark-blue:#28304E;/*深蓝*/
+@blue:#3B4263;/*蓝*/
+@line-grey:#e1e1e1;/*浅灰*/
+@background-grey:#f3f3f3;/*浅灰*/
+@toast-black:rgba(0,0,0,0.7);/*toast背景色*/
+@mask-black:rgba(0,0,0,0.4);/*蒙层*/
+@sheet-background:rgba(255,255,255,0.8); /**/
+@button-press:rgba(98,129,194,0.5);/*button按下去的颜色*/
+
+@primary-color2:#6281C2;
+@enable-color2:#6281C2;
+@success-color2:#F96854;
+@disable-color2:#e1e1e1;
+
+.clearfix(){
+  content:"";
+  display: block;
+  height:0;
+  clear:both;
+}
+
+.lm-form-box{
+  width:100%;
+  background: #fff;
+  padding:0.08rem;
+  box-sizing:border-box;
+  position: relative;
+  .lm-form-label{
+      width:100%;
+      .lm-label-error{
+        display: inline-block;
+        float: right;
+        color:#F96854;
+        line-height: 2;
+      }
+
+      span:first-of-type{
+        display: inline-block;
+        font-size:0.13rem;
+        color:#555;
+        float: left;
+        max-width: 50%;
+        line-height: 2;
+      }
+    .lm-number-tip{
+      display: inline-block;
+      float: left;
+      font-size:0.1rem;
+      color:#878787;
+      margin-left:0.025rem;
+      line-height:0.26rem;
+    }
+
+    &:after{
+      .clearfix;
+    }
+
+  }
+  input[type="text"],input[type="password"]{
+    width:100%;
+    line-height: 25px;
+  }
+  div[contenteditable="true"]{
+    width: 100%;
+    min-height:0.26rem;
+    max-height:1rem;
+    height:auto;
+    resize: none;
+    overflow: auto;
+    &:focus{
+      border: 0;
+      outline: none;
+    }
+
+  }
+
+
+  select{
+    -webkit-appearance: none;
+    float: left;
+    width:100%;
+    //position: absolute;
+    //left:0;
+    //top:0;
+    border:0;
+    height:25px;
+    &:focus{
+      outline: none;
+      border: none;
+    }
+  }
+
+  select + .lm-select-icon{
+    display: inline-block;
+    position: absolute;
+    right:0.08rem;
+    bottom:0.08rem;
+    color:@light-grey;
+    z-index:1;
+  }
+
+  .lm-input{
+    width:100%;
+    line-height: 2;
+    font-size:0.13rem;
+    position: relative;
+
+    &:after{
+      .clearfix;
+    }
+
+  }
+
+  .lm-upload{
+    width:100%;
+    line-height: 2;
+    font-size:0.13rem;
+    position: relative;
+    .lm-upload-add{
+      height:0.53333rem;
+      width:0.726665rem;
+      background: #f3f3f3;
+      border-radius: 0.025rem;
+      position: relative;
+      &:before{
+        content:"";
+        display: block;
+        width:0.21333rem;
+        height:0.04rem;
+        position: absolute;
+        top:50%;
+        left:50%;
+        margin-top:-0.02rem;
+        margin-left:-0.10666rem;
+        background:#fff;
+      }
+      &:after{
+        content:"";
+        display: block;
+        position: absolute;
+        height:0.213333rem;
+        width:0.04rem;
+        top:50%;
+        left:50%;
+        margin-left:-0.02rem;
+        margin-top:-0.10666rem;
+        background:#fff;
+
+      }
+    }
+
+  }
+
+  .lm-radio-plain,.lm-checkbox-plain{
+    width:100%;
+    li{
+      float: left;
+      width: 32%;
+      margin-right:2%;
+      margin-top:0.1rem;
+      position: relative;
+      label{
+        display: inline-block;
+        width:100%;
+        box-sizing: border-box;
+        border: 1px solid #878787;
+        color:#878787;
+        border-radius:0.15rem;
+        line-height:0.3rem ;
+        text-align: center;
+        font-size: 0.13rem;
+      }
+      input[type="radio"],input[type="checkbox"]{
+        position: absolute;
+        left:0;
+        top:0;
+        width:100%;
+        height:100%;
+        z-index:1;
+        opacity: 0;
+      }
+      input[type="radio"]:checked+label, input[type="checkbox"]:checked+label{
+        border:1px solid @primary-color2;
+        color:@primary-color2;
+      }
+      &:nth-of-type(3n){
+        margin-right:0;
+      }
+    }
+
+    &:after{
+      .clearfix;
+    }
+  }
+
+  &:after{
+    .clearfix;
+  }
+}
+
+.lm-focus {
+  .lm-form-label{
+    .lm-label-text{
+      color:#6281C2;
+    }
+    .lm-label-error{
+      display: none;
+    }
+  }
+}
